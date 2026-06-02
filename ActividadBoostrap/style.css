@@ -1,6 +1,4 @@
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 .parallax-section {
   background-attachment: fixed;
@@ -8,15 +6,45 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
-  position: relative;
   overflow: hidden;
 }
 
-.nav-link {
-  color: #fff !important;
-  margin: 0 10px;
+.nav-link { color: #fff !important; margin: 0 10px; }
+.nav-link:hover { color: #0d6efd !important; }
+
+.punto { width: 16px; height: 16px; border-radius: 50%; background: #0d6efd; }
+.linea { width: 20px; height: 2px; background: white; }
+
+.circulo { width: 40px; height: 40px; border-radius: 50%; }
+.cuadrado { width: 40px; height: 40px; border-radius: 4px; }
+
+.circulo-incompleto {
+  width: 80px; height: 80px; border-radius: 50%;
+  border: 6px dashed #0d6efd;
+}
+.cuadrado-incompleto {
+  width: 80px; height: 80px;
+  border: 6px dashed #dc3545;
+  border-bottom: none;
 }
 
-.nav-link:hover {
-  color: #0d6efd !important;
+.figura-fondo {
+  width: 120px; height: 100px;
+  background: black; position: relative; overflow: hidden;
 }
+.figura-centro {
+  position: absolute; left: 50%; top: 0;
+  transform: translateX(-50%);
+  width: 40px; height: 100px;
+  background: white; border-radius: 0 0 50% 50%;
+}
+
+.simetria-izq { width: 60px; height: 80px; background: #0d6efd; clip-path: polygon(100% 0, 100% 100%, 0 50%); }
+.simetria-der { width: 60px; height: 80px; background: #0d6efd; clip-path: polygon(0 0, 0 100%, 100% 50%); }
+
+.flecha-anim { font-size: 2rem; color: #0d6efd; animation: dcha 1.5s infinite alternate ease-in-out; }
+.flecha-opuesta { font-size: 2rem; color: #dc3545; animation: izqda 1.5s infinite alternate ease-in-out; }
+@keyframes dcha  { from { transform: translateX(0); } to { transform: translateX(10px); } }
+@keyframes izqda { from { transform: translateX(0); } to { transform: translateX(-10px); } }
+
+.icono-exp { font-size: 3rem; }

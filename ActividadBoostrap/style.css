@@ -42,9 +42,6 @@ html { scroll-behavior: smooth; }
 .simetria-izq { width: 60px; height: 80px; background: #0d6efd; clip-path: polygon(100% 0, 100% 100%, 0 50%); }
 .simetria-der { width: 60px; height: 80px; background: #0d6efd; clip-path: polygon(0 0, 0 100%, 100% 50%); }
 
-.flecha-anim { font-size: 2rem; color: #0d6efd; animation: dcha 1.5s infinite alternate ease-in-out; }
-.flecha-opuesta { font-size: 2rem; color: #dc3545; animation: izqda 1.5s infinite alternate ease-in-out; }
-@keyframes dcha  { from { transform: translateX(0); } to { transform: translateX(10px); } }
-@keyframes izqda { from { transform: translateX(0); } to { transform: translateX(-10px); } }
+.flecha { font-size: 2rem; color: #0d6efd; }
 
 .icono-exp { font-size: 3rem; }
